@@ -56,10 +56,22 @@ function geraSenha() {
         senha = senha + alfabeto[numeroAleatorio];
     }
     campoSenha.value = senha;
+    classificaSenha(alfabeto.length);
 }
 
 geraSenha();
 
-for (i=0; i< checkbox.length; i++) {
-    checkbox[i].onclick = geraSenha;
+function classificaSenha(tamanhoAlfabeto){
+let entropia = tamanhoSenha*Math.log2(tamanhoAlfabeto);
+console.log(entropia);
+forcasenha.clsslist.remove('fraca','media','forte');
+if (entropia > 57){
+    forcasenha.classlist.,add('forte');
+}  else if (entropia > 35 && entropia < 57 ){
+    forcasenha.classlist.add('media');
+} else if (entropia ,<=35){
+    forcasenha.classlist.add('fraca');
+}
+const valorEntropia = document.querySelector('.entropia');
+valorEntropia.textcontent = 2**Math.floor(entropia)/(100e6*60*60*24);
 }
