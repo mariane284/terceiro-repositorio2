@@ -61,6 +61,7 @@ function geraSenha() {
 
 geraSenha();
 
+
 function classificaSenha(tamanhoAlfabeto){
 let entropia = tamanhoSenha*Math.log2(tamanhoAlfabeto);
 console.log(entropia);
